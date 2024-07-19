@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+    border: 0;
+    color: #000;
+}
+
+:root {
+    --yellow: #F7F700;
+}
+
+html {
+    font-size: 62.5%; 
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #CAF7B7;
+    font-family: Arial, sans-serif;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #fff;
+}
+
+.container {
+    height: 100vh;
+    width: 80%;
+    background-color: #fff;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.container .upper-content {
+    height: 100px;
+    background-color: #0000F7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem; 
+    flex-wrap: wrap;
+}
+
+.container .lower-content {
+    padding: 2rem;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+}
+
+.container .upper-content .boxWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.container .upper-content .boxWrapper .box {
+    border-radius: 10px;
+    height: 50px;
+    width: 50px;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+
+.container .lower-content .bubbles {
+    background-color: var(--yellow);
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    color: #130f40;
+    margin: 0.5rem;
+    cursor: pointer;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .container .upper-content {
+        gap: 1rem;
+    }
+
+    .container .upper-content .boxWrapper .box {
+        height: 40px;
+        width: 40px;
+        font-size: 1.5rem;
+    }
+
+    .container .lower-content .bubbles {
+        height: 50px;
+        width: 50px;
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 95%;
+    }
+
+    .container .upper-content {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem 0;
+    }
+
+    .container .upper-content .boxWrapper {
+        gap: 0.5rem;
+    }
+
+    .container .upper-content .boxWrapper .box {
+        height: 35px;
+        width: 35px;
+        font-size: 1.2rem;
+    }
+
+    .container .lower-content .bubbles {
+        height: 40px;
+        width: 40px;
+        font-size: 1.5rem;
+    }
+}
